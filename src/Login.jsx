@@ -1,12 +1,14 @@
 import PropTypes from "prop-types";
+import logo from "../../media/Logo PNG/main-w.png";
 
 const Login = ({ updateLogin }) => {
   return (
     <>
-      <div className=" w-full h-full bg-gray-400 flex items-center justify-center">
-        <div className="flex flex-col items-center justify-center h-2/5 w-1/5 bg-white rounded-md">
-          <div>
-            <h1 className="text-3xl font-bold py-2">{"Login Form"}</h1>
+      <div className=" w-full h-full bg-purple-100 flex items-center justify-center">
+        <div className="flex flex-col items-center justify-center h-3/5 w-1/5 bg-white rounded-md">
+          <div className="flex items-center justify-center overflow-hidden rounded-md">
+            {/* <h1 className="text-3xl font-bold py-2">{"Login Form"}</h1> */}
+            <img src={logo} alt="logo" />
           </div>
           <form className="flex flex-col items-start justify-start px-2 py-2 w-full h-6/7">
             <label className=" font-semibold">{"Email: "}</label>
