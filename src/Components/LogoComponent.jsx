@@ -9,7 +9,7 @@ const LogoComponent = ({ updateLogo }) => {
         updateLogo(false);
       }}
     >
-      <img src={logo} alt="Company Logo" />
+      <img src={logo} alt="Our Logo" />
     </div>
   );
 };

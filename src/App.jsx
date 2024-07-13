@@ -1,8 +1,9 @@
 import { useState } from "react";
-import Login from "./Login";
-import SignUp from "./SignUp";
 import LogoComponent from "./Components/LogoComponent";
 import SignUpDetails from "./Components/SignUpDetails";
+import Index from "./Components/layouts";
+import CompanyLogin from "./Components/CompanyLogin";
+import CompanySignUp from "./Components/CompanySignUp";
 
 function App() {
   const [login, setLogin] = useState(false);
@@ -18,14 +19,14 @@ function App() {
   return (
     <>
       <div className="w-screen h-screen">
-        {logo ? (
+        {/* {logo ? (
           <LogoComponent updateLogo={updateLogo} />
         ) : login ? (
-          <Login updateLogin={updateLogin} />
+          <CompanyLogin updateLogin={updateLogin} />
         ) : (
-          <SignUp updateLogin={updateLogin} />
-        )}
-        {/* <SignUpDetails /> */}
+          <CompanySignUp updateLogin={updateLogin} />
+        )} */}
+        <Index />
       </div>
     </>
   );
