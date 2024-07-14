@@ -1,10 +1,15 @@
+import { useState } from "react";
+import Home from "../../Home";
 import Header from "./Header";
 
 const Index = () => {
+  const [header, setHeader] = useState("Dashboard");
+
   return (
     <>
-      <div className="w-full h-full bg bg-white">
-        <Header />
+      <div className=" h-full w-full bg-white">
+        <Header setHeader={setHeader} />
+        <Home header={header} />
       </div>
     </>
   );

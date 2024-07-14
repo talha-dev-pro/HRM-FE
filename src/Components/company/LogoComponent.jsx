@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../../media/Logo PNG/main-b.png";
+import logo from "../../../../media/Logo PNG/main-b.png";
 
 const LogoComponent = ({ updateLogo }) => {
   return (

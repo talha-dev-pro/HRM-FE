@@ -1,9 +1,9 @@
 import { useState } from "react";
-import LogoComponent from "./Components/LogoComponent";
-import SignUpDetails from "./Components/SignUpDetails";
+import LogoComponent from "./Components/company/LogoComponent";
+import SignUpDetails from "./Components/company/SignUpDetails";
 import Index from "./Components/layouts";
-import CompanyLogin from "./Components/CompanyLogin";
-import CompanySignUp from "./Components/CompanySignUp";
+import CompanyLogin from "./Components/company/CompanyLogin";
+import CompanySignUp from "./Components/company/CompanySignUp";
 
 function App() {
   const [login, setLogin] = useState(false);
@@ -26,6 +26,7 @@ function App() {
         ) : (
           <CompanySignUp updateLogin={updateLogin} />
         )} */}
+        {/* <SignUpDetails /> */}
         <Index />
       </div>
     </>

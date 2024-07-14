@@ -1,5 +1,5 @@
 import { useState } from "react";
-import logo from "../../../media/Logo PNG/main-w.png";
+import logo from "../../../../media/Logo PNG/main-w.png";
 
 const SignUpDetails = ({}) => {
   const [companyName, setCompanyName] = useState("");

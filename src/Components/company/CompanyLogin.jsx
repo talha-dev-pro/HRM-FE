@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import logo from "../../../media/Logo PNG/main-w.png";
+import logo from "../../../../media/Logo PNG/main-w.png";
 import { useState } from "react";
 
 const CompanyLogin = ({ updateLogin }) => {
