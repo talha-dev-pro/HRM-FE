@@ -7,12 +7,12 @@ const Header = ({ setHeader }) => {
   return (
     <>
       <div className="flex h-16 w-full bg-white absolute items-center justify-between">
-        <div className="flex items-center w-24 h-full bg-white absolute left-0 border-dashed border-r">
+        <div className="flex items-center w-24 h-full bg-white absolute left-0 border-dashed border-r-2">
           <img src={logo} className="h-20 w-full object-contain" alt="logo" />
         </div>
         <div className="flex flex-col items-center w-24 bg-white absolute top-16 left-0">
           <button
-            className="w-14 h-16 object-contain mt-10 pr-2 hover:text-purple-500 cursor-pointer"
+            className="w-14 h-16 object-contain mt-10 pr-2 hover:text-purple-600 cursor-pointer"
             onClick={() => {
               setHeader("Dashboard");
             }}

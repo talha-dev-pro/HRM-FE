@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Home from "../../Home";
 import Header from "./Header";
+import { LoginContext } from "../../App";
 
 const Index = () => {
   const [header, setHeader] = useState("Dashboard");
+  // const [auth, setAuth] = useContext(LoginContext);
 
   return (
     <>
