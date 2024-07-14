@@ -1,16 +1,20 @@
-import { useContext, useState } from "react";
+import { useState } from "react";
 import Home from "../../Home";
 import Header from "./Header";
-import { LoginContext } from "../../App";
+import PropTypes from "prop-types";
 
 const Index = () => {
   const [header, setHeader] = useState("Dashboard");
-  // const [auth, setAuth] = useContext(LoginContext);
+
+  const head = (newState) => {
+    console.log(true);
+    setHeader(newState);
+  };
 
   return (
     <>
       <div className=" h-full w-full bg-white">
-        <Header setHeader={setHeader} />
+        <Header head={head} />
         <Home header={header} />
       </div>
     </>

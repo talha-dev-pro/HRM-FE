@@ -1,7 +1,8 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
 import logo from "../../../../media/Logo PNG/main-w.png";
 
-const SignUpDetails = ({}) => {
+const SignUpDetails = ({ registered }) => {
   const [companyName, setCompanyName] = useState("");
   const [companyAddress, setCompanyAddress] = useState("");
   const [companyPhoone, setCompanyPhone] = useState("");
@@ -76,7 +77,12 @@ const SignUpDetails = ({}) => {
               />
             </form>
             <div className="w-full h-1/5 flex items-center justify-center">
-              <button className=" bg-purple-400 rounded-md px-4 py-2 w-1/5 text-white">
+              <button
+                className=" bg-purple-400 rounded-md px-4 py-2 w-1/5 text-white"
+                onClick={() => {
+                  registered(true);
+                }}
+              >
                 {"Register"}
               </button>
             </div>
@@ -85,6 +91,9 @@ const SignUpDetails = ({}) => {
       </div>
     </>
   );
+};
+SignUpDetails.propTypes = {
+  registered: PropTypes.func,
 };
 
 export default SignUpDetails;

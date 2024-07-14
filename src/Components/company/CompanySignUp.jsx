@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import logo from "../../../../media/Logo PNG/main-w.png";
 import { useState } from "react";
 
-const CompanySignUp = ({ updateLogin }) => {
+const CompanySignUp = ({ updateLogin, enterDetails }) => {
   const [companyEmail, setCompanyEmail] = useState("");
   const [companyPassword, setCompanyPassword] = useState("");
   const [companyConformPassword, setCompanyConformPassword] = useState("");
@@ -55,7 +55,12 @@ const CompanySignUp = ({ updateLogin }) => {
             </p>
           </div>
           <div className="w-full h-1/5 flex items-center justify-center">
-            <button className=" bg-purple-400 rounded-md px-4 py-2 w-4/5 text-white">
+            <button
+              className=" bg-purple-400 rounded-md px-4 py-2 w-4/5 text-white"
+              onClick={() => {
+                enterDetails(true);
+              }}
+            >
               {"SignUp"}
             </button>
           </div>
@@ -67,6 +72,7 @@ const CompanySignUp = ({ updateLogin }) => {
 
 CompanySignUp.propTypes = {
   updateLogin: PropTypes.func,
+  enterDetails: PropTypes.func,
 };
 
 export default CompanySignUp;

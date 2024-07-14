@@ -2,8 +2,9 @@ import logo from "../../../../media/Logo PNG/main-w.png";
 import dash from "../../../../media/menu_3388694.png";
 import profile from "../../../../media/user.png";
 import notification from "../../../../media/active.png";
+import PropTypes from "prop-types";
 
-const Header = ({ setHeader }) => {
+const Header = ({ head }) => {
   return (
     <>
       <div className="flex h-16 w-full bg-white absolute items-center justify-between">
@@ -14,7 +15,7 @@ const Header = ({ setHeader }) => {
           <button
             className="w-14 h-16 object-contain mt-10 pr-2 hover:text-purple-600 cursor-pointer"
             onClick={() => {
-              setHeader("Dashboard");
+              head("Dashboard");
             }}
           >
             <img src={dash} className="pl-4" alt="menu" />
@@ -27,7 +28,7 @@ const Header = ({ setHeader }) => {
             className="mr-6 object-contain h-8 cursor-pointer"
             alt="notification"
             onClick={() => {
-              setHeader("Notifications");
+              head("Notifications");
             }}
           />
           <img
@@ -35,13 +36,17 @@ const Header = ({ setHeader }) => {
             className="mr-6 object-contain h-10 cursor-pointer"
             alt="profile"
             onClick={() => {
-              setHeader("Profile");
+              head("Profile");
             }}
           />
         </div>
       </div>
     </>
   );
+};
+
+Header.propTypes = {
+  head: PropTypes.func,
 };
 
 export default Header;
